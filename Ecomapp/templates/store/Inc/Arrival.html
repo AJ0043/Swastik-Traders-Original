@@ -26,23 +26,96 @@
 </div>
 
 <style>
-.Arrival-image img {
-    width: 80%;
-    height: 200px;
-    object-fit: cover;
-    padding: 10px;
-    z-index: 1000;
-}
 
-::-webkit-scrollbar {
-    width: 0px;
-}
+    .Arrival-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        padding: 8px;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .Arrival-image img:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 50px;
+    }
+    
+    .card p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 22px;
+        font-weight: bold;
+        color: darkgoldenrod;
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .card span {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .float-start {
+        color: red;
+        font-weight: bold;
+    }
+    
+    .float-end {
+        color: green;
+        font-weight: bold;
+    }
+    
+    @media (max-width: 1200px) {
+        .card {
+            max-width: 250px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .card {
+            max-width: 220px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .card {
+            max-width: 200px;
+        }
+        
+        .card p {
+            font-size: 20px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .card {
+            max-width: 180px;
+        }
+    
+        .card p {
+            font-size: 18px;
+        }
+    }
+    
 
-::-webkit-scrollbar-track {
-    background-color: black;
-    width: 0px;
-}
-</style>
+
+</style>   
 
 {% block content %}
 <!-- Your content goes here -->
